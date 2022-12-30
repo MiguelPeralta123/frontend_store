@@ -68,3 +68,38 @@ h2 {
 h3 {
   font-size: 2.4rem;
 }
+
+/* Para el CSS de este proyecto vamos a usar el paradigma de BEM.
+Bloques: Son los elementos HTML que no dependen de ningún otro elemento (.header).
+Elementos: Estan contenidos dentro de los bloques, parte de su diseño depende de ellos (.header__cliente).
+Modificadores: Son variaciones de los elementos (.header__cliente--vip). */
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: center;
+}
+
+.header__logo {
+  margin: 3rem 0;
+}
+
+/* NAV */
+.nav {
+  background-color: var(--darkFirst);
+  padding: 1rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem; /* Separa los elementos dentro de nav */
+}
+
+.nav__link {
+  font-family: var(--mainFont);
+  color: var(--white);
+  font-size: 3rem;
+}
+
+.nav__link--selected,
+.nav__link:hover {
+  color: var(--second);
+}
