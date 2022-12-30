@@ -75,6 +75,7 @@ Elementos: Estan contenidos dentro de los bloques, parte de su diseño depende d
 Modificadores: Son variaciones de los elementos (.header__cliente--vip). */
 
 /* HEADER */
+
 .header {
   display: flex;
   justify-content: center;
@@ -84,20 +85,41 @@ Modificadores: Son variaciones de los elementos (.header__cliente--vip). */
   margin: 3rem 0;
 }
 
-/* NAV */
+/* FOOTER */
+
+.footer {
+  background-color: var(--darkFirst);
+  padding: 1rem 0;
+  margin-top: 2rem;
+}
+
+.footer__text {
+  text-align: center;
+  font-family: var(--mainFont);
+  font-size: 2.2rem;
+}
+
+/* NAVIGATION */
+
 .nav {
   background-color: var(--darkFirst);
   padding: 1rem 0;
   display: flex;
   justify-content: center;
-  gap: 2rem; /* Separa los elementos dentro de nav */
+  gap: 2rem; /* Nueva forma de separar los elementos entre sí, algunos navegadores no la soportan */
 }
 
 .nav__link {
   font-family: var(--mainFont);
   color: var(--white);
   font-size: 3rem;
+  /* margin-right: 2rem; Antigua forma de separar los elementos entre sí, todos los navegadores la soportan. Requiere del pseudoselector de abajo para centrar */
 }
+
+/* Este pseudoselector afecta solo al último elemento de un determinado tipo (el último .nav__link) */
+/*.nav__link:last-of-type {
+  margin-right: 0;
+}*/
 
 .nav__link--selected,
 .nav__link:hover {
