@@ -17,12 +17,33 @@
     </header>
 
     <nav class="nav">
-        <a class="nav__link nav__link--selected" href="index.html">Store</a>
+        <a class="nav__link" href="index.html">Store</a>
         <a class="nav__link" href="about_us.html">About us</a>
     </nav>
 
     <main class="container">
-        <h1>Our products</h1>
+        <h1>React</h1>
+        
+        <div class="shirt">
+            <img class="shirt__img" src="img/3.jpg" alt="Shirt image">
+
+            <div class="shirt__content">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate illo sunt asperiores laudantium consectetur soluta pariatur dolor enim sequi inventore alias doloribus iste at architecto labore, eius perspiciatis voluptatibus esse?</p>
+
+                <form class="form">
+                    <!-- Este elemento es como un dropbox -->
+                    <select class="form__field">
+                        <option disabled selected>-- Select size --</option>
+                        <option>Small</option>
+                        <option>Medium</option>
+                        <option>Large</option>
+                    </select>
+
+                    <input class="form__field" type="number" placeholder="Number" min="1">
+                    <input class="form__submit" type="submit" value="Add to cart">
+                </form>
+            </div>
+        </div>
     </main>
 
     <footer class="footer">
