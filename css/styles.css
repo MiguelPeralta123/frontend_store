@@ -107,20 +107,15 @@ Modificadores: Son variaciones de los elementos (.header__cliente--vip). */
   padding: 1rem 0;
   display: flex;
   justify-content: center;
-  gap: 2rem; /* Nueva forma de separar los elementos entre sí, algunos navegadores no la soportan */
+  /* gap: 2rem; Nueva forma de separar los elementos entre sí, algunos navegadores no la soportan */
 }
 
 .nav__link {
   font-family: var(--mainFont);
   color: var(--white);
   font-size: 3rem;
-  /* margin-right: 2rem; Antigua forma de separar los elementos entre sí, todos los navegadores la soportan. Requiere del pseudoselector de abajo para centrar */
+  margin: 0 1rem; /* Antigua forma de separar los elementos entre sí, todos los navegadores la soportan */
 }
-
-/* Este pseudoselector afecta solo al último elemento de un determinado tipo (el último .nav__link) */
-/*.nav__link:last-of-type {
-  margin-right: 0;
-}*/
 
 .nav__link--selected,
 .nav__link:hover {
@@ -199,7 +194,6 @@ Modificadores: Son variaciones de los elementos (.header__cliente--vip). */
 .about-us {
   display: grid;
   gap: 2rem;
-
 }
 
 @media (min-width: 768px) {
@@ -221,8 +215,14 @@ Modificadores: Son variaciones de los elementos (.header__cliente--vip). */
 /* BLOCKS */
 
 .buy__title {
-  margin-top: 10rem;
-  margin-bottom: 1rem ;
+  margin-top: 5rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .buy__title {
+    margin-bottom: 0;
+  }
 }
 
 .blocks {
@@ -270,6 +270,7 @@ Modificadores: Son variaciones de los elementos (.header__cliente--vip). */
   padding: 1rem;
   appearance: none;
   border-radius: 1rem;
+  width: 100%;
 }
 
 .form__submit {
