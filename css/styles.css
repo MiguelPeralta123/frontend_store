@@ -142,6 +142,11 @@ Modificadores: Son variaciones de los elementos (.header__cliente--vip). */
   background-color: var(--darkFirst);
   padding: 1rem;
   border-radius: 1rem;
+  transition: 0.2s ease-in-out;
+
+  &:hover {
+    scale: 1.02;
+  }
 }
 
 .product__name {
@@ -280,16 +285,13 @@ Modificadores: Son variaciones de los elementos (.header__cliente--vip). */
   font-family: var(--mainFont);
   padding: 2rem;
   border-radius: 1rem;
-
-  /* Esta es una animación, el color de fondo va a tardar 3s en cambiar. Se puede usar para cualquier propiedad de css */
-  transition: font-size .3s ease, background-color .3s ease;
-
+  transition: 0.2s ease-in-out;
   /* Haciendo que el boton abarque las dos columnas */
   grid-column: 1 / 3;
-}
 
-.form__submit:hover {
-  cursor: pointer;
-  background-color: var(--darkSecond);
-  font-size: 2.2rem;
+  &:hover {
+    scale: 1.02;
+    background-color: var(--darkSecond);
+    cursor: pointer;
+  }
 }
